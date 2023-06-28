@@ -1,0 +1,36 @@
+<h2>Lista de Héroes</h2>
+<h3 class="fs-1">{{alias}}</h3>
+
+<dl>
+  <dt>Nombre:</dt>
+  <dd class="fs-2 fw-bold">{{nombre}}</dd>
+
+  <dt>Edad:</dt>
+  <dd class="fs-2 fw-bold">{{edad}}</dd>
+
+  <dt>Método:</dt>
+  <dd class="fs-2 fw-bold">{{getHeroeDescripcion()}}</dd>
+
+  <dt>Capitalizado:</dt>
+  <dd class="fs-2 fw-bold">{{capitalizedName}}</dd>
+</dl>
+
+<button
+  *ngIf="alias !== 'Spiderman'"
+  (click)="cambiarHeroe();"
+  class="btn btn-primary mx-2">
+  Cambiar Heroe
+</button>
+
+<button
+  *ngIf="edad !== 20"
+  (click)="cambiarEdad();"
+  class="btn btn-primary">
+  Cambiar Edad
+</button>
+
+<button
+  (click)="resetForm();"
+  class="btn btn-primary mx-2">
+  Resetear
+</button>
